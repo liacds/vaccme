@@ -6,10 +6,10 @@ class VaccineBody extends Component {
     render() { 
         return( 
             <div className="Body col-11 col-lg-8">
-                <QA/>
-                <QA/>
-                <QA/>
-                <QA/>
+                <QA q={2}/>
+                <QA q={3}/>
+                <QA q={4}/>
+                <QA q={5}/>
             </div>
         );
     }

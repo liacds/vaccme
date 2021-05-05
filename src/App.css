@@ -109,6 +109,7 @@
   height: 40px;
   background-color: transparent;
   justify-content: space-between;
+  padding: 0;
 }
 
 .SearchBar button{
@@ -120,7 +121,6 @@
   height: 100%;
   background-color: white;
   border: 1px solid #E4E4EA;
-  border-right-width: 0;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   padding: 0;
@@ -138,10 +138,10 @@
   border-width: 0;
   border: 1px solid #E4E4EA;
   border-left-width: 0;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
+  border-right-width: 1px;
   font-size: 14px;
   font-family: Helvetica;
+  padding-left: 10px;
 }
 
 .SearchBar input::placeholder{
@@ -152,30 +152,21 @@
   outline: none;
 }
 
-.SearchBar .DatePicker{
-  width: 48%;
-  border-width: 0;
-  border: 1px solid #E4E4EA;
-  border-radius: 7px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  padding-left: 16px;
-  margin-top: 8px;
-  height: 36px;
-  -webkit-appearance: none;
-}
 
 .SearchBar select{
-  width: 48%;
   border-width: 0;
   border: 1px solid #E4E4EA;
   border-radius: 7px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   padding-left: 16px;
-  margin-top: 8px;
   height: 36px;
   -webkit-appearance: none;
+  height: 100%;
+  width: 100%;
 }
 
 .SearchBar select:focus{
@@ -375,7 +366,7 @@
 
 .QuestionRow .Question{
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -453,25 +444,33 @@
 .Footer .SocialNetworks .FacebookIcon{
   height: 30px;
 }
-
-.GeneralInfo{
+@media only screen and (max-width: 768px) {
+  .Selected{
+    text-align: left;
+  }
+  
+  .InfoText{
+    text-align: left;
+  }
+}
+.Selected{
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   text-decoration-line: underline;
   text-decoration-color: #FC5643;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
-  text-align: left;
   margin-bottom: 15px;
+  padding: 0;
 }
 
 .InfoText{
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #6F778C;
-  text-align: left;
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .OurTeam{

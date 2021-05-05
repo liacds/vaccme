@@ -41,7 +41,7 @@ class HomeBody extends Component {
                             }
                         })
                     }
-                    <button className="More col-11" onClick={()=>this.setState({isOpen: true})}>Еще</button>
+                    <button className="More col-12" onClick={()=>this.setState({isOpen: true})}>Еще</button>
                     </>
                 }
                 <MiniFAQ/>

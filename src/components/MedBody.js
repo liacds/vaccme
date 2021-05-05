@@ -4,12 +4,12 @@ import infoIcon from '../assets/images/infoicon.png'
 import moveIcon from '../assets/images/moveicon.png'
 import WebButton from '../components/WebButton'
 import {ServerAddress} from '../constants/ServerAddress'
-
 export default class MedBody extends Component {
     constructor(props){
         super(props)
         this.state = { 
             medorganization: {},
+            loaded: false
         }
     }
     componentDidMount(){
@@ -20,13 +20,16 @@ export default class MedBody extends Component {
                     medorganization: response,
                 })
                 console.log(response)
-            })
+        })
     }
     render() {
         return (
             <div className="Body col-11 col-lg-8">
                 <div className="row col-12" style={{justifyContent: "space-between", marginBottom: 50}}>
-                    <img src={`http://127.0.0.1:8000${this.state.medorganization.photo}`} alt='pht' className='col-12 col-lg-5' style={{padding: 0}}/>
+                {
+                    this.state.loaded ? <img src={`${ServerAddress}${this.state.medorganization.photo}`} alt='pht' className='col-12 col-lg-5' style={{padding: 0}} onLoad={() => this.setState({loaded: true})}/>
+                    :<></>
+                }
                     <div className="col-12 col-lg-5" style={{padding: 0}}>
                         <span className="Info col-12">Информация</span>
                         <div className="InfoRow">

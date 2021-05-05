@@ -5,17 +5,18 @@ class SearchBar extends Component {
     state = {  }
     render() { 
         return ( 
-            <div className="Search col-12">
-                <div className="SearchBar col-12">
+            <div className="Search col-12 row">
+                <div className="SearchBar col-lg-10 col-8">
                     <button>
                         <img src={search} alt="search"></img>
                     </button>
-                    <input placeholder="Больниц, Район"></input>
+                    <input placeholder="Больница, Район"></input>
                 </div>
-                <div className="SearchBar col-12">
-                    <input className="DatePicker" type="date" placeholder="По дате"></input>
+                <div className="SearchBar col-lg-2 col-4">
                     <select>
                         <option value="0">I и II тип</option>
+                        <option value="1">I тип</option>
+                        <option value="2">II тип</option>
                     </select>
                 </div>
             </div>

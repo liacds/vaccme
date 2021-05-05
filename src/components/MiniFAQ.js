@@ -6,8 +6,8 @@ class MiniFAQ extends Component {
         return ( 
             <div className="MiniFAQ col-12">
                 <span className="FAQBigText">FAQ</span>
-                <QA/>
-                <QA/>
+                <QA q={0}/>
+                <QA q={1}/>
             </div>
          );
     }
