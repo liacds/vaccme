@@ -9,6 +9,13 @@
   flex-direction: column;
 }
 
+a { color: inherit; } 
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App {
   background-color: #F2F9F9;
   position: relative;
@@ -108,9 +115,9 @@
   bottom: 60px;
   height: 40px;
   background-color: transparent;
-  justify-content: space-between;
   padding: 0;
 }
+
 
 .SearchBar button{
   display: flex;
@@ -139,6 +146,8 @@
   border: 1px solid #E4E4EA;
   border-left-width: 0;
   border-right-width: 1px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
   font-size: 14px;
   font-family: Helvetica;
   padding-left: 10px;
@@ -154,24 +163,31 @@
 
 
 .SearchBar select{
+  margin-top: 10px;
   border-width: 0;
   border: 1px solid #E4E4EA;
   border-radius: 7px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-width: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   padding-left: 16px;
   height: 36px;
   -webkit-appearance: none;
   height: 100%;
-  width: 100%;
+  margin-right: 10px;
 }
 
 .SearchBar select:focus{
   outline: none;
 }
+@media only screen and (max-width: 992px) {
+  .SearchBar{
+    justify-content: space-between;
+  }
+  .SearchBar select{
+    margin-right: 0px;
+  }
+}
+
 
 .Body{
   margin-top: 40px;
@@ -214,6 +230,11 @@
   margin-bottom: 15px;
 }
 
+
+.PCard .LinkStyle{
+  justify-content: flex-start;
+}
+
 .PCard .Name{
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
@@ -254,6 +275,19 @@
   text-align: left;
 }
 
+.PCard a{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 7px;
+  padding: 0;
+  font-size: 16px;
+  height: 46px;
+  margin-top: 6px;
+  text-align: left;
+}
+
 .PCard .Move-Button{
   border: none;
   background-color: #FC5643;
@@ -274,12 +308,15 @@
   margin-right: 10px;
 }
 
+.PCard a img{
+  height: 14px;
+  margin-right: 10px;
+}
+
 .RulesB{
   align-self: center;
   margin-top: 14px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .RulesB img{
@@ -291,7 +328,6 @@
   font-size: 16px;
   color: #FC5643;
   text-decoration-line: underline;
-  margin-left: 14px;
 }
 
 .More {
@@ -444,7 +480,7 @@
 .Footer .SocialNetworks .FacebookIcon{
   height: 30px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .Selected{
     text-align: left;
   }
@@ -520,8 +556,8 @@ input::placeholder{
   font-size: 16px;
   height: 50px;
   color: white;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Body .OurTeam{
@@ -552,6 +588,19 @@ input::placeholder{
   margin: 0;
 }
 
+.HelperButtons a {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 7px;
+  padding: 0;
+  font-size: 16px;
+  height: 46px;
+  margin-top: 10px;
+  text-align: left;
+}
+
 .HelperButtons button{
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -580,7 +629,46 @@ input::placeholder{
   color: #FC5643;
 }
 
-.HelperButtons button img{
+.HelperButtons img{
   height: 14px;
   margin-right: 10px;
+}
+
+
+
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border: 1px solid #2E3A59;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #2E3A59 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

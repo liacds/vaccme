@@ -6,19 +6,21 @@ import typeIcon from '../assets/images/typeicon.png'
 import moveIcon from '../assets/images/moveicon.png'
 import infoIcon from '../assets/images/infoicon.png'
 import WebButton from '../components/WebButton'
-import { Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import {ServerAddress} from '../constants/ServerAddress'
+import { Link } from 'react-router-dom';
 
 class PCard extends Component {
     constructor(props){
         super(props)
         this.state = { 
             medorganization: {},
+            id: props.id,
         }
     }
     componentDidMount(){
-        fetch(`${ServerAddress}/medorganizations/${this.props.id}`)
+        console.log(this.state.id)
+        fetch(`${ServerAddress}/medorganizations/${this.state.id}`)
             .then(response => response.json())
             .then(response => {
                 this.setState({
@@ -28,13 +30,13 @@ class PCard extends Component {
     }
     render() { 
         return ( 
-            <Link to={`/medorg/${this.state.medorganization.id}`} className="col-12" style={{textDecoration: 'none', color: 'black'}}>
+            <div className="col-12" style={{textDecoration: 'none', color: 'black'}}>
                 <MediaQuery query="(max-width: 992px)">
                     {
                         matches =>
                             matches?
                             (<div className="card PCard col-12">
-                                <span className="Name">{this.state.medorganization.name}</span>
+                                <Link to={'/medorg/'+this.state.medorganization.id} className="LinkStyle"><span className="Name">{this.state.medorganization.name}</span></Link>
                                 <div className="Details container">
                                     <div className="row">
                                         <div className="col-xs-12 col-sm-12 col-md-3">
@@ -71,16 +73,18 @@ class PCard extends Component {
                                             <img src={moveIcon} alt='moveIcon'></img>
                                             <span className="col-7">Проехать</span>
                                         </button>
-                                        <WebButton pk = {this.state.medorganization.id}/>
-                                        <div className="RulesB col-11 col-lg-5">
-                                            <img src={infoIcon} alt='infoIcon'></img>
-                                            <span className="Rules">Правила вакцинирования</span>
-                                        </div>
+                                        <WebButton medorganization = {this.state.medorganization}/>
+                                        <Link to='/about-vaccine' className="RulesB col-12 col-lg-5">
+                                            <div style={{margin: "auto"}}>
+                                                <img src={infoIcon} alt='infoIcon'></img>
+                                                <span className="Rules">Правила вакцинирования</span>
+                                            </div>
+                                        </Link>
                                     </div>
                             </div>)
                             :
                             (<div className="card PCard col-12" style={{padding: 30}}>
-                                <span className="Name">{this.state.medorganization.name}</span>
+                                <Link to={'/medorg/'+this.state.medorganization.id} className="LinkStyle"><span className="Name">{this.state.medorganization.name}</span></Link>
                                 <div className="Details container">
                                     <div className="row"> 
                                         <div className="col-xs-12 col-sm-12 col-md-3">
@@ -113,20 +117,24 @@ class PCard extends Component {
                                     </div>
                                 </div>
                                 <div className="CardButtons row m-0">
-                                        <button className="Move-Button  col-lg-3">
-                                            <img src={moveIcon} alt='moveIcon'></img>
-                                            <span className="col-7">Проехать</span>
-                                        </button>
-                                        <WebButton pk = {this.state.medorganization.id}/>
-                                        <div className="RulesB col-11 col-lg-5">
-                                            <img src={infoIcon} alt='infoIcon'></img>
-                                            <span className="Rules">Правила вакцинирования</span>
-                                        </div>
+                                        <a href={this.state.medorganization.twogis_link} className="col-lg-3 Move-Button">
+                                            {/* <button className=" col-12"> */}
+                                                <img src={moveIcon} alt='moveIcon'></img>
+                                                <span className="col-7">Проехать</span>
+                                            {/* </button> */}
+                                        </a>
+                                        <WebButton medorganization = {this.state.medorganization}/>
+                                        <Link to='/about-vaccine' className="RulesB col-12 col-lg-5">
+                                            <div style={{margin: "auto"}}>
+                                                <img src={infoIcon} alt='infoIcon'></img>
+                                                <span className="Rules">Правила вакцинирования</span>
+                                            </div>
+                                        </Link>
                                     </div>
                             </div>)
                     }
                 </MediaQuery>
-            </Link>
+            </div>
          );
     }
 }

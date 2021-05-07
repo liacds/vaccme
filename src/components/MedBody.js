@@ -9,7 +9,7 @@ export default class MedBody extends Component {
         super(props)
         this.state = { 
             medorganization: {},
-            loaded: false
+            loaded: false,
         }
     }
     componentDidMount(){
@@ -26,10 +26,14 @@ export default class MedBody extends Component {
         return (
             <div className="Body col-11 col-lg-8">
                 <div className="row col-12" style={{justifyContent: "space-between", marginBottom: 50}}>
-                {
-                    this.state.loaded ? <img src={`${ServerAddress}${this.state.medorganization.photo}`} alt='pht' className='col-12 col-lg-5' style={{padding: 0}} onLoad={() => this.setState({loaded: true})}/>
-                    :<></>
-                }
+                    <img src={`${ServerAddress}${this.state.medorganization.photo}`} 
+                    alt='pht' 
+                    className='col-12 col-lg-6' 
+                    style={this.state.loaded ? {padding: 0} : {display: 'none'}}
+                    onLoad={()=>{
+                        this.setState({loaded: true})
+                        console.log("loaded")
+                    }}/>
                     <div className="col-12 col-lg-5" style={{padding: 0}}>
                         <span className="Info col-12">Информация</span>
                         <div className="InfoRow">
@@ -63,7 +67,7 @@ export default class MedBody extends Component {
                                     <img src={moveIcon} alt='moveIcon'></img>
                                     <span className="col-7">Проехать</span>
                                 </button>
-                            <WebButton medBody = {true} pk = {this.state.medorganization.id}/>
+                            <WebButton medBody = {true} medorganization = {this.state.medorganization}/>
                         </div>
                     </div>
                 </div>

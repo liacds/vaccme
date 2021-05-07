@@ -6,15 +6,19 @@ class SearchBar extends Component {
     render() { 
         return ( 
             <div className="Search col-12 row">
-                <div className="SearchBar col-lg-10 col-8">
-                    <button>
+                <div className="SearchBar col-12">
+                    <button onClick={this.props.handleSubmit}>
                         <img src={search} alt="search"></img>
                     </button>
-                    <input placeholder="Больница, Район"></input>
+                    <input placeholder="Больница, Район" onChange={this.props.handleName} value={this.state.value} />
                 </div>
-                <div className="SearchBar col-lg-2 col-4">
-                    <select>
-                        <option value="0">I и II тип</option>
+                <div className="SearchBar">
+                    <select className="col-lg-3 col-5" onChange={this.props.handleStock} value={this.state.value}>
+                        <option value="true">Есть в наличии</option>
+                        <option value="false">Нет</option>
+                    </select>
+                    <select className="col-lg-3 col-5" onChange={this.props.handleType} value={this.state.value}>
+                        <option value="3">I и II тип</option>
                         <option value="1">I тип</option>
                         <option value="2">II тип</option>
                     </select>

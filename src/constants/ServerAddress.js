@@ -1,1 +1,1 @@
-export const ServerAddress='https://vaccine-me-ppewu.ondigitalocean.app'
+export const ServerAddress='https://vaccineme.kz'
