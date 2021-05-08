@@ -73,7 +73,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .Vaccine-me button .Vaccine-end{
-  color: #FC5643;
+  color: #F89F7E;
 }
 
 .header .Top .Right{
@@ -290,17 +290,17 @@ a, a:hover, a:focus, a:active {
 
 .PCard .Move-Button{
   border: none;
-  background-color: #FC5643;
+  background-color: #F89F7E;
   color: white;
 }
 
 .PCard .Web-Button{
   background-color: white;
-  border: 1px solid #FC5643;
+  border: 1px solid #F89F7E;
 }
 
 .PCard .WebText{
-  color: #FC5643;
+  color: #F89F7E;
 }
 
 .PCard button img{
@@ -326,7 +326,7 @@ a, a:hover, a:focus, a:active {
 .Rules{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #FC5643;
+  color: #F89F7E;
   text-decoration-line: underline;
 }
 
@@ -494,7 +494,7 @@ a, a:hover, a:focus, a:active {
   font-size: 16px;
   font-weight: bold;
   text-decoration-line: underline;
-  text-decoration-color: #FC5643;
+  text-decoration-color: #F89F7E;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
   margin-bottom: 15px;
@@ -552,7 +552,7 @@ input::placeholder{
   font-family: 'Open Sans', sans-serif;
   border-radius: 7px;
   border: none;
-  background-color: #FC5643;
+  background-color: #F89F7E;
   font-size: 16px;
   height: 50px;
   color: white;
@@ -616,17 +616,17 @@ input::placeholder{
 
 .HelperButtons .Move-Button{
   border: none;
-  background-color: #FC5643;
+  background-color: #F89F7E;
   color: white;
 }
 
 .HelperButtons .Web-Button{
   background-color: white;
-  border: 1px solid #FC5643; 
+  border: 1px solid #F89F7E; 
 }
 
 .HelperButtons .WebText{
-  color: #FC5643;
+  color: #F89F7E;
 }
 
 .HelperButtons img{
