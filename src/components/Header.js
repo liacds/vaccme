@@ -31,7 +31,7 @@ class Header extends Component {
                 <div className="container col-11 col-lg-8 column m-0" style={{padding: 0}}>
                     <Navbar collapseOnSelect className="col-12" expand="lg" bg="transparent" variant="dark" style={{paddingTop: 20, paddingBottom: 0, fontFamily: "sans-serif", fontSize: 16, color: 'white'}}>
                         <Link to='/'>
-                            <img src={logo} alt='logo'/>
+                            <img src={logo} alt='logo' style={{height: '16px'}}/>
                         </Link>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{border: 'transparent', outline: 'none'}} />
                         <Navbar.Collapse id="responsive-navbar-nav">
