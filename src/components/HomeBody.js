@@ -37,6 +37,7 @@ class HomeBody extends Component {
         this.setState({type: e.target.value})
     }
     async handleSubmit(){
+        this.handleCancel()
         let type = this.state.type
         let stock = this.state.stock
         console.log(type)
@@ -46,6 +47,7 @@ class HomeBody extends Component {
             console.log("HELPP")
             const requestOptions = {
                 method: 'POST',
+                mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ type: "I тип", search_query: this.state.name, in_stock: "в наличии" })
             };
@@ -148,12 +150,12 @@ class HomeBody extends Component {
                             }
                         })
                     }
-                    <button className="More col-12" onClick={()=>this.setState({isOpen: true})}>Еще</button>
+                    <button className="More col-12 col-lg-5" onClick={()=>this.setState({isOpen: true})}>Еще</button>
                     </>
                     :<>
-                    <button onClick={this.handleCancel} className="col-lg-3 col-12">
-                    <span>{this.state.searchName}</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <button onClick={this.handleCancel} className="col-12 col-lg-5 More" style={{alignContent: 'center', justifyItems: 'center'}}>
+                    <span style={{marginRight: '5px'}}>Параметры поиска: {this.state.searchName}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                     </svg>

@@ -79,22 +79,22 @@ class ContactUsPage extends Component {
                         }
                     </div>
                     <div className="col-12 col-lg-5" style={{marginBottom: '30px'}}>
-                        <div className="col-lg-8 col-12" style={{marginLeft: 'auto', marginRight: 'auto',}}>
+                        <div className="col-lg-10 col-12" style={{marginLeft: 'auto', marginRight: 'auto',}}>
                             <span className="OurTeam col-12">Контактная информация</span>
                             <div style={{marginTop: "12px"}}>
-                                <img src={mailicon} alt="mailicon"/>
+                                <img src={mailicon} alt="mailicon" style={{height: "16px", width: "20px"}}/>
                                 <a href="mailto:vaccine.me.kz@gmail.com" style={{fontSize: '16px', fontFamily:'sans-serif', color: '#2E3A59', marginLeft: '10px', textDecoration: "underline"}}>vaccine.me.kz@gmail.com</a>
                             </div>
                             <div style={{marginTop: "5px"}}>
-                                <img src={phoneIcon} alt="phoneIcon"/>
+                                <img src={phoneIcon} alt="phoneIcon" style={{height: "18px", width: "18px"}}/>
                                 <a href="tel:+77072802306" style={{fontSize: '16px', fontFamily:'sans-serif', color: '#2E3A59', marginLeft: '10px', textDecoration: "underline"}}>87072802306</a>
                             </div>
                             <div style={{marginTop: "25px"}}>
                                 <a href="https://api.whatsapp.com/send?phone=77072802306&text=Здравствуйте!">
-                                    <img src={whatsapp} alt="whatsapp"/>
+                                    <img src={whatsapp} alt="whatsapp" style={{height: "32px", width: "32px"}}/>
                                 </a>
                                 <a href="https://telegram.me/bereeennn" style={{marginLeft: "30px"}}>
-                                    <img src={telegram} alt="telegram"/>
+                                    <img src={telegram} alt="telegram" style={{height: "28px", width: "28px"}}/>
                                 </a>
                             </div>
                         </div>

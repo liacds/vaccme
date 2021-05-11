@@ -20,43 +20,43 @@ class Footer extends Component {
                 {
                     !this.state.isOpen ?
                     <button className="Menu  col-12" onClick={()=>this.setState({isOpen:true})}>
-                    <div className="col-11 Row col-lg-8">
+                    <div className="col-11 Row col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                         <span>О вакцине</span>
-                        <img src={plusIcon} alt='plusIcon'/>
+                        <img src={plusIcon} alt='plusIcon' style={{height: "18px", width: "18px"}}/>
                     </div>
                     </button>
                     :
                     <>
                         <button className="Menu col-12" onClick={()=>this.setState({isOpen:false})}>
-                        <div className="col-11 Row col-lg-8">
+                        <div className="col-11 Row col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                             <span>О вакцине</span>
-                            <img src={minusIcon} alt='minusIcon'/>
+                            <img src={minusIcon} alt='minusIcon' style={{height: "4px", width: "18px"}}/>
                         </div>
                         </button>
                         <Link to='/about-vaccine' className="col-12">
                             <button className="Menu Normal col-12">
-                            <div className="col-11 col-lg-8">
+                            <div className="col-11 col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                                 <span>Общая информация</span>
                             </div>
                             </button>
                         </Link>
                         <Link to='/about-vaccine' className="col-12">
                             <button className="Menu Normal col-12">
-                            <div className="col-11 col-lg-8">
+                            <div className="col-11 col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                                 <span>Правила вакцинации</span>
                             </div>
                             </button>
                         </Link>
                         <Link to='/about-vaccine' className="col-12">
                             <button className="Menu Normal col-12" >
-                            <div className="col-11 col-lg-8">
+                            <div className="col-11 col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                                 <span>Требования к документам</span>
                             </div>
                             </button>
                         </Link>
                         <Link to='/about-vaccine' className="col-12">
                             <button className="Menu Normal col-12">
-                            <div className="col-11 col-lg-8">
+                            <div className="col-11 col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                                 <span>Ограничения</span>
                             </div>
                             </button>
@@ -65,14 +65,14 @@ class Footer extends Component {
                 }
                 <Link to='/about-us' className="col-12">
                     <button className="Menu col-12">
-                    <div className="col-11 col-lg-8">
+                    <div className="col-11 col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                         <span>О нас</span>
                     </div>
                     </button>
                 </Link>
                 <Link to='/contact-us' className="col-12">
                     <button className="Menu col-12">
-                    <div className="col-11 col-lg-8">
+                    <div className="col-11 col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                         <span>Контакты</span>
                     </div>
                     </button>
@@ -80,7 +80,7 @@ class Footer extends Component {
 
                 <Link to='/faq' className="col-12">
                     <button className="Menu col-12">
-                        <div className="col-11 col-lg-8">
+                        <div className="col-11 col-lg-8" style={{paddingLeft: "20px", paddingRight: "20px"}}>
                          <span>FAQ</span>
                         </div>
                     </button>

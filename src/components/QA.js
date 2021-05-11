@@ -16,7 +16,7 @@ class QA extends Component {
                         this.props.q === 0 ? <span className="Question">Зачем нужно вакцинироваться?</span> :
                         this.props.q === 1 ? <span className="Question">Зачем нужно прививаться?</span> :
                         this.props.q === 2 ? <span className="Question">Общая информация</span> :
-                        this.props.q === 3 ? <span className="Question">Правила вакцинирование</span> :
+                        this.props.q === 3 ? <span className="Question">Правила вакцинирования</span> :
                         this.props.q === 4 ? <span className="Question">Требование к документам</span> :
                         this.props.q === 5 ? <span className="Question">Ограничения</span> :
                         this.props.q === 6 ? <span className="Question">Кому можно вакцинироваться?</span> :
@@ -38,7 +38,7 @@ class QA extends Component {
                             this.props.q === 0 ? <span className="Question">Зачем нужно вакцинироваться?</span> :
                             this.props.q === 1 ? <span className="Question">Зачем нужно прививаться?</span> :
                             this.props.q === 2 ? <span className="Question">Общая информация</span> :
-                            this.props.q === 3 ? <span className="Question">Правила вакцинирование</span> :
+                            this.props.q === 3 ? <span className="Question">Правила вакцинирования</span> :
                             this.props.q === 4 ? <span className="Question">Требование к документам</span> :
                             this.props.q === 5 ? <span className="Question">Ограничения</span> :
                             this.props.q === 6 ? <span className="Question">Кому можно вакцинироваться?</span> :
@@ -56,7 +56,7 @@ class QA extends Component {
                         this.props.q === 0 ? <span className="Answer">Чтобы снизить циркуляцию вируса в обществе, защитить себя, и тех, кто не может привиться, чтобы пандемия закончилась</span> :
                         this.props.q === 1 ? <span className="Answer">Прививка - самый надежный способ защитить себя и своих близких от тяжелого течения Covid-19. Ваш организм будет знаком с вирусом и в случае заражения сможет легко и быстро защитить вас.</span> :
                         this.props.q === 2 ? <span className="Answer">Общая информация</span> :
-                        this.props.q === 3 ? <span className="Answer">Правила вакцинирование</span> :
+                        this.props.q === 3 ? <span className="Answer">Правила вакцинирования</span> :
                         this.props.q === 4 ? <span className="Answer">Требование к документам</span> :
                         this.props.q === 5 ? <>
                                 <span className="Answer">Противопоказания требуют очной консультации с врачом и решаются индивидуально. Нужно разделять относительные противопоказания от абсолютных, даже при определенных заболеваниях вакцинация возможна, если состояние человека позволяет.</span>
