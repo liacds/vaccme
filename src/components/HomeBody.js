@@ -47,7 +47,6 @@ class HomeBody extends Component {
             console.log("HELPP")
             const requestOptions = {
                 method: 'POST',
-                mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ type: "I тип", search_query: this.state.name, in_stock: "в наличии" })
             };
