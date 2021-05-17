@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PCard from './PCard';
 import SearchBar from '../components/SearchBar';
-import MiniFAQ from '../components/MiniFAQ';
 import {ServerAddress} from '../constants/ServerAddress'
 
 class HomeBody extends Component {
@@ -166,7 +165,7 @@ class HomeBody extends Component {
                     }
                     </>
                 }
-                <MiniFAQ/>
+                
             </div>
          );
     }
