@@ -42,7 +42,7 @@ class HomeBody extends Component {
         console.log(type)
         console.log(stock)
         this.setState({searchName: this.state.name})
-        if(stock && type === 1){
+        if(stock && type == 1){
             console.log("HELPP")
             const requestOptions = {
                 method: 'POST',
@@ -55,7 +55,7 @@ class HomeBody extends Component {
             this.setState({ searchedmedorganizations: data, isOpen: false });
             console.log(this.state.medorganizations);
         }
-        else if(stock && type === 2){
+        else if(stock && type == 2){
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -67,7 +67,7 @@ class HomeBody extends Component {
             this.setState({ searchedmedorganizations: data, isOpen: false });
             console.log(this.state.medorganizations);
         }
-        else if(stock && type === 3){
+        else if(stock && type == 3){
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -79,7 +79,7 @@ class HomeBody extends Component {
             this.setState({ searchedmedorganizations: data, isOpen: false });
             console.log(this.state.medorganizations);
         }
-        else if(!stock && type === 1){
+        else if(!stock && type == 1){
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -91,7 +91,7 @@ class HomeBody extends Component {
             this.setState({ searchedmedorganizations: data, isOpen: false });
             console.log(this.state.medorganizations);
         }
-        else if(!stock && type === 2){
+        else if(!stock && type == 2){
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -103,7 +103,7 @@ class HomeBody extends Component {
             this.setState({ searchedmedorganizations: data, isOpen: false });
             console.log(this.state.medorganizations);
         }
-        else if(!stock && type === 3){
+        else if(!stock && type == 3){
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

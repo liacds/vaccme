@@ -4,6 +4,7 @@ import infoIcon from '../assets/images/infoicon.png'
 import moveIcon from '../assets/images/moveicon.png'
 import WebButton from '../components/WebButton'
 import {ServerAddress} from '../constants/ServerAddress'
+import { Link } from 'react-router-dom';
 export default class MedBody extends Component {
     constructor(props){
         super(props)
@@ -59,8 +60,10 @@ export default class MedBody extends Component {
                             <span>Удостоверение</span>
                         </div>
                         <div className="RulesB col-12" style={{justifyContent:"flex-start"}}>
+                        <Link to='/about-vaccine' className="RulesB col-12 col-lg-5">
                             <img src={infoIcon} alt='infoIcon'></img>
                             <span className="Rules">Правила вакцинирования</span>
+                            </Link>
                         </div>
                         <div className="HelperButtons col-12 row">
                             <button className="Move-Button col-12 col-lg-5">
