@@ -14,7 +14,7 @@ class FAQBody extends Component {
                     <div className="col-12 row" style={{textAlign: 'center'}}>
                         <span className="Selected col-12 col-lg-3" onClick={()=>this.setState({selected: 1})}>Общая информация</span>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 2})}>Кому можно прививаться</span>
-                        <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникВ</span>
+                        <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникV</span>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 4})}>После вакцинации</span>
                     </div>
                     </>:
@@ -23,7 +23,7 @@ class FAQBody extends Component {
                     <div className="col-12 row" style={{textAlign: 'center'}}>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 1})}>Общая информация</span>
                         <span className="Selected col-12 col-lg-3" onClick={()=>this.setState({selected: 2})}>Кому можно прививаться</span>
-                        <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникВ</span>
+                        <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникV</span>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 4})}>После вакцинации</span>
                     </div>
                     </>:
@@ -32,7 +32,7 @@ class FAQBody extends Component {
                     <div className="col-12 row" style={{textAlign: 'center'}}>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 1})}>Общая информация</span>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 2})}>Кому можно прививаться</span>
-                        <span className="Selected col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникВ</span>
+                        <span className="Selected col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникV</span>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 4})}>После вакцинации</span>
                     </div>
                     </>:
@@ -41,7 +41,7 @@ class FAQBody extends Component {
                     <div className="col-12 row" style={{textAlign: 'center'}}>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 1})}>Общая информация</span>
                         <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 2})}>Кому можно прививаться</span>
-                        <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникВ</span>
+                        <span className="InfoText col-12 col-lg-3" onClick={()=>this.setState({selected: 3})}>СпутникV</span>
                         <span className="Selected col-12 col-lg-3" onClick={()=>this.setState({selected: 4})}>После вакцинации</span>
                     </div>
                     </>:   <></> 
@@ -50,12 +50,12 @@ class FAQBody extends Component {
                 this.state.selected === 1?
                 <>
                     <QA q={0}/>
-                    <QA q={1}/>
+                    
                 </>:
                 this.state.selected === 2?
                 <>
                     <QA q={6}/>
-                    <QA q={7}/>
+                    
                 </>:
                 this.state.selected === 3?
                 <>

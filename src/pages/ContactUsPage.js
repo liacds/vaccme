@@ -42,7 +42,7 @@ class ContactUsPage extends Component {
                     <div className="col-12 col-lg-7" style={{marginBottom: '50px'}}>
                         <input className="AboutName col-12" placeholder="Имя" onChange={(e)=>this.setState({name: e.target.value})}/>
                         <input type="email" className="AboutName col-12" placeholder="Email" onChange={(e)=>this.setState({email: e.target.value})}/>
-                        <textarea className="AboutDesc col-12" placeholder="Вы молодцы..." onChange={(e)=>this.setState({message: e.target.value})}/>
+                        <textarea className="AboutDesc col-12" placeholder="Вопросы или пожелания" onChange={(e)=>this.setState({message: e.target.value})}/>
                         <button className="AboutSend col-12" onClick={this.handleSubmit}>Отправить сообщение</button>
                         {
                             this.state.sending ?

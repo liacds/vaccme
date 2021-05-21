@@ -48,7 +48,7 @@ class Header extends Component {
                             <>
                                 <span className="Main-Text col-12">Вакцинация в вашем городе</span>
                                 <span className="Helping-Text col-12">
-                                    Vaccine.me - платформа с актуальной инфомацией о вакцине(CпутникV) и доступных пунктах вакцинации в Алматы
+                                    Vaccine.me - платформа с актуальной инфомацией о вакцине (CпутникV) и доступных пунктах вакцинации в Алматы
                                 </span>   
                             </>
                         :

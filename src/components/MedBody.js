@@ -26,7 +26,7 @@ export default class MedBody extends Component {
     render() {
         return (
             <div className="Body col-11 col-lg-8">
-                <div className="row col-12" style={{justifyContent: "space-between", marginBottom: 50}}>
+                <div className="row col-12" style={{justifyContent: "space-between", marginBottom: 50, 'align-items':'flex-start'}}>
                     <img src={`${this.state.medorganization.photo}`} 
                     alt='pht' 
                     className='col-12 col-lg-6' 
